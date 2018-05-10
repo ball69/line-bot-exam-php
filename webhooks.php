@@ -5,8 +5,6 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = 'F91qn9+cosBSeiXmO5rTLn1pAU+yUw1AxXvGDPRtlL4IO8GgIwwdXIVb/HgPkoAcQh1InmIbH1kOl8OI5DkoM3vw3gejfxXL5iyn5OJ+dQTQ6VRd7QMk555tNZQOY7uQf6B5sH6tBusMXtpaeRyFaAdB04t89/1O/w1cDnyilFU=';
 
-echo $access_token;
-
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
