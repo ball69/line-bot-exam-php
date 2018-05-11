@@ -47,5 +47,5 @@ if (!is_null($events['events'])) {
 }
 
 function setMessage($event) {
-
+    return jsone_encode($event['events']['source']);
 }
