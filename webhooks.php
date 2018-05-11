@@ -5,10 +5,10 @@ $access_token = 'F91qn9+cosBSeiXmO5rTLn1pAU+yUw1AxXvGDPRtlL4IO8GgIwwdXIVb/HgPkoA
 
 // Get POST body content
 $content = file_get_contents('php://input');
-print_r($content);
-exit;
 // Parse JSON
 $events = json_decode($content, true);
+print_r($events);
+exit;
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 // Loop through each event
