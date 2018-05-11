@@ -7,8 +7,6 @@ $access_token = 'F91qn9+cosBSeiXmO5rTLn1pAU+yUw1AxXvGDPRtlL4IO8GgIwwdXIVb/HgPkoA
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-print_r($events);
-exit;
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 // Loop through each event
@@ -44,7 +42,7 @@ if (!is_null($events['events'])) {
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         $result = curl_exec($ch);
         curl_close($ch);
-        echo $result . "\r\n";
+        echo $result . "\r\n" . $replyToken;
     }
 }
 
